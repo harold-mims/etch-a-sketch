@@ -9,11 +9,23 @@
 
     <body>
         <div id="header">
-            <p>Header Logo</p>
+            <p id="header-text">Etch A Sketch</p>
             <a href="https://github.com/harold-mims/etch-a-sketch">GitHub Repo</a>
         </div>
         <div id="container">
+            <div id="options-container">
+                <button class="options-button" id="black-btn">Black</button>
+                <button class="options-button" id="rgb-btn">RGB</button>
+                <button class="options-button" id="clear-btn">Clear</button>
+                <input type="range" id="options-slider" name="points" min="1" max="100" value="16">
+                <div>
+                    <span>Dimension: </span>
+                    <span id="grid-size"></span>
+                </div>
+            </div>
+            <div id="etch-a-sketch-container">
 
+            </div>
         </div>
         <div id="footer">
             <p>Copyright @ The Odin Project 2021</p>
