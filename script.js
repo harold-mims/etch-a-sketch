@@ -30,6 +30,10 @@ function resizeGrid() {
         etchContainer.appendChild(tempWrapper);
     }
 
+    if(isGridOn){
+        applyGrid();
+    }
+
 }
 
 function deleteGrid() {
@@ -42,6 +46,35 @@ function deleteGrid() {
 }
 
 /*-------- Option Controls --------*/
+
+// Toggle The grid
+let isGridOn = false;
+function toggleGrid(){
+    if(isGridOn) {
+        removeGrid();
+        isGridOn = false;
+    } else {
+        applyGrid();
+        isGridOn = true;
+    }
+}
+
+function applyGrid(){
+    let etchDivs = document.querySelectorAll(".etch-div")
+    etchDivs.forEach((element) => {
+        element.classList.add("etch-div-grid")
+    });
+}
+
+function removeGrid(){
+    let etchDivs = document.querySelectorAll(".etch-div")
+    etchDivs.forEach((element) => {
+        element.classList.remove("etch-div-grid")
+    });
+}
+const gridBtn = document.getElementById("grid-btn");
+gridBtn.addEventListener('click', toggleGrid);
+
 
 // Set the Color Mode to RGB or Black
 let colorMode = 'black'

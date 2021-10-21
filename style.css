@@ -77,10 +77,19 @@ body {
 
 .etch-div {
     flex: 1 1 auto;
-    border: 0.5px solid black;
     height: 100%
+}
+
+.etch-div-grid {
+    border: 0.5px solid black;
+
 }
 
 .etch-div-hover {
     background-color: black;
+}
+
+a:link, a:visited {
+    text-decoration: none;
+    color: inherit;
 }
